@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "#";
+var prefix = "$come";
 client.on('message', message => {
     if (message.content == "#سرعه") {
         var x = ["DreamKing",
