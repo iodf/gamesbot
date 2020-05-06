@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "#fast";
-client.on('message', fbbk => {
-    if (fbbk.content == "#سرعه") {
+client.on('message', fkk => {
+    if (fkk.content == "#سرعه") {
         var x = ["DreamKing",
 "DeathGames",
 "زيرو كنج",
@@ -86,20 +86,20 @@ client.on('message', fbbk => {
         ];
         
         var x3 = Math.floor(Math.random()*x.length)
-        fbbk.channel.send(` اول شخص يكتب :  __**${x[x3]}**__
+        fkk.channel.send(` اول شخص يكتب :  __**${x[x3]}**__
 لديك 15 ثانية للاجابة`).then(msg1=> {
-            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+            var r = fkk.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
                 time : 15000,
                 errors : ['time']
             })
         r.catch(() => {
-            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            return fkk.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
             الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
         })
         
         r.then((collected)=> {
-            fbbk.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
+            fkk.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
         })
         })
     }
