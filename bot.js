@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "$come";
-client.on('message', message => {
-    if (message.content == "#سرعه") {
+var prefix = "#fast";
+client.on('message', fbbk => {
+    if (fbbk.content == "#سرعه") {
         var x = ["DreamKing",
 "DeathGames",
 "زيرو كنج",
@@ -86,7 +86,7 @@ client.on('message', message => {
         ];
         
         var x3 = Math.floor(Math.random()*x.length)
-        message.channel.send(` اول شخص يكتب :  __**${x[x3]}**__
+        fbbk.channel.send(` اول شخص يكتب :  __**${x[x3]}**__
 لديك 15 ثانية للاجابة`).then(msg1=> {
             var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
                 maxMatches : 1,
@@ -99,7 +99,7 @@ client.on('message', message => {
         })
         
         r.then((collected)=> {
-            message.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
+            fbbk.channel.send(`${collected.first().author} لقد قمت بكتابة الكلمة في الوقت المناسب  `);
         })
         })
     }
